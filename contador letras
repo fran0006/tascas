@@ -1,1 +1,10 @@
+def count_a(word):
+    a_count = 0  
+    for letter in word:
+            if "a" == letter:
+                    a_count = a_count + 1   
+    return a_count
+
+user_word = input("Enter a word: ")
+print (count_a(user_word))
 
