@@ -1,0 +1,18 @@
+def distancia_caracter(paraula, lletra):
+    posiciones = [] 
+    resultado = []
+
+
+    for i in range(len(paraula)):
+        if paraula[i] == lletra: 
+            posiciones.append(i)
+    for j in range(len(paraula)):
+         
+     
+            distancia_minima = min([abs(j - pos) for pos in posiciones])
+            resultado.append(distancia_minima)
+
+            
+    return resultado 
+
+print(distancia_caracter("bulbasur", "u"))
