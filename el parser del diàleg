@@ -1,0 +1,17 @@
+def parse_npc(raw):
+    raw = "NPC_NAME:Elden_Merchamt|LOCATION:Caelid|HP:450|GOLD:1250"
+    result = raw.replace ("_", " ")
+    clean_text = result.split("|")
+    super_clean_text = raw.split(":")
+    lista_HP = clean_text[2].split(":")
+    HP_numero = int(lista_HP[1])
+    lista_GOLD = clean_text[3].split(":")
+    GOLD_numero = int(lista_GOLD[1])
+    lista_name = clean_text[0].split(":")
+    main_character = lista_name[1]
+    print("HP:", HP_numero)
+    print("GOLD:", GOLD_numero)
+    print(super_clean_text)
+    dialogo = f"Hola, soc {main_character} i tinc {GOLD_numero} dor que he aconseguit"
+    print("dialogo:", dialogo)
+parse_npc("")
