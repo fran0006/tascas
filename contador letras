@@ -1,10 +1,16 @@
 def a_count(word):
-    contador = 0
+    counter = 0
     
    
     while "a" in word:
-        contador = contador + 1
-
-        word = word.replace("a", "", 1) 
+        counter = counter + 1
+       
+        word = word.replace("a", "", 1)
         
-    return contador
+    return counter
+
+
+user_word = input("Enter your word: ")
+result = a_count(user_word)
+
+print(result)
