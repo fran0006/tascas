@@ -1,0 +1,22 @@
+def son_anagramas(text1, text2):
+    # Remove spaces and convert to lowercase
+    text1 = text1.lower()
+    text2 = text2.lower()
+    cleantext1 = ""
+    cleantext2 = ""
+
+    for letra in text1:
+
+        if letra.isalpha():  
+         cleantext1 += letra
+
+    for letra in text2:
+
+        if letra.isalpha():  
+         cleantext2 += letra         
+    
+    # Sort the characters of both strings
+    return sorted(cleantext1) == sorted(cleantext2)
+
+
+print(son_anagramas("tom marvolo riddle", "i am lord voldemort"))
